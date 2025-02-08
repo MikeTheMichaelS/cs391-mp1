@@ -1,0 +1,170 @@
+/* General reset */
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+/* Header */
+#header-wrapper {
+    width: 100%;
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+/* Container for navigation and main content */
+#content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    /* Ensure responsive height */
+}
+
+/* Navigation */
+#nav-wrapper {
+    flex: 3;
+    /* 30% of the width */
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+nav li {
+    margin-bottom: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    flex: 1;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: lightskyblue;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Main content */
+#main-wrapper {
+    flex: 7;
+    /* 70% of the width */
+    background-color: beige;
+    width: 100%;
+    padding: 20px;
+    height: 100vh;
+}
+
+#main-wrapper h2 {
+    text-align: center;
+}
+
+#main-wrapper img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+}
+
+/* Footer */
+#footer-wrapper {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive design for screens smaller than 1000px */
+@media (max-width: 1000px) {
+
+    #header-wrapper {
+        width: 100%;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+
+    #content-wrapper {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        /* Stack navigation and main content vertically */
+        height: auto;
+    }
+
+    #nav-wrapper {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        /* Full width for nav */
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    #nav-wrapper nav {
+        display: flex;
+        flex-direction: row;
+        /* Horizontal layout for links */
+        margin: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        /* Horizontal layout for links */
+        justify-content: space-around;
+        width: 100%;
+        /* Full width for nav */
+        margin: 0;
+
+    }
+
+    nav ul li {
+        display: inline;
+        margin-bottom: 0;
+        flex: 1;
+        border: 1px solid black;
+    }
+
+    nav a {
+        display: block;
+        align-content: center;
+        color: black;
+        background-color: lightskyblue;
+        padding: 10px 0;
+        /* text-align: center; */
+        text-decoration: none;
+        font-size: calc(2vw);
+    }
+
+    #main-wrapper {
+        background-color: beige;
+        width: 100%;
+        padding: 0;
+    }
+}
